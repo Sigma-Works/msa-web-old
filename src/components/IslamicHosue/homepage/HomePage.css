@@ -1,0 +1,164 @@
+/* CSS Variables for easy customization */
+:root {
+  --primary-color: #4b2e83;
+  --secondary-color: #b7a57a;
+  --light-bg: #f3f4f6;
+  --white: #ffffff;
+  --text-color: #333;
+  --overlay-color: rgba(0, 0, 0, 0.5);
+  --transition-speed: 0.3s;
+  --border-radius: 12px;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  background: url("/public/ihbackground.jpg") center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  padding: 0 20px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-color);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-top: 10px;
+}
+
+/* MAIN CONTENT SECTION */
+.content-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Using Flexbox ordering to swap the columns on desktop */
+.prayer-times-section {
+  order: 1; /* Will appear on the left */
+  background: var(--white);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 320px;
+}
+
+.about-section {
+  order: 2;
+  background: var(--white);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 320px;
+}
+
+.prayer-times-section h2,
+.about-section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  font-size: 1.75rem;
+}
+
+.about-section p,
+.prayer-times-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* DONATE BUTTON */
+.donate-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-speed),
+    transform var(--transition-speed);
+  font-weight: bold;
+}
+
+.donate-button:hover {
+  background-color: #322654;
+  transform: translateY(-3px);
+}
+
+.spacer {
+  height: 50px;
+}
+
+/* Additional About Section */
+.about-additional {
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.about-additional h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.about-additional p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  /* On smaller screens, we reset the order to the natural DOM order if needed */
+  .content-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}

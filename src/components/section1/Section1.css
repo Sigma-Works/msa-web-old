@@ -1,0 +1,103 @@
+.section1 {
+  height: 100vh;
+  padding: 50px 20px;
+  background: url("/public/homepage.png") no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Overlay for a more subtle tint */
+.section1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(75, 46, 131, 0.3),
+    rgba(255, 223, 186, 0.2)
+  ); /* Gradient with purple and light gold tint */
+  z-index: 0;
+}
+
+/* Container for welcome text */
+.welcome-container {
+  max-width: 750px;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.85); /* Light, semi-transparent white */
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  position: relative;
+  z-index: 1;
+  color: #4b2e83; /* UW Purple for text */
+}
+
+/* Welcome title */
+.welcome-title {
+  font-size: 64px;
+  font-weight: 900;
+  margin-bottom: 24px;
+  color: #4b2e83;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* Welcome text */
+.welcome-text {
+  font-size: 20px;
+  margin-bottom: 40px;
+  line-height: 1.8;
+  color: #4b2e83;
+}
+
+/* Button group */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Donate button */
+.donate-button {
+  background-color: #b7a57a; /* UW Gold */
+  color: #4b2e83;
+  padding: 15px 35px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle button shadow */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.donate-button:hover {
+  background-color: #4b2e83; /* Invert colors */
+  color: #b7a57a;
+  transform: translateY(-4px); /* Subtle hover animation */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .welcome-title {
+    font-size: 40px;
+  }
+
+  .welcome-text {
+    font-size: 18px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .donate-button {
+    padding: 12px 28px;
+    font-size: 16px;
+  }
+}

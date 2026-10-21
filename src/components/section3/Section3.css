@@ -1,0 +1,79 @@
+/* Base Styles */
+.section3 {
+  padding: 50px 20px;
+  background-color: #4b2e83; /* UW Purple */
+  color: #ffffff; /* White text for contrast */
+}
+
+.section3 h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-rotator {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+}
+
+.rotating-image {
+  width: 100%;
+  height: auto;
+  max-height: 80vh; /* Prevents image from exceeding viewport height */
+  object-fit: contain; /* Scales image to fit without cropping */
+  display: block;
+}
+
+/* Navigation Buttons */
+.prev-button,
+.next-button {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: #ffffff;
+  font-size: 2.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+  .section3 {
+    padding: 30px 10px;
+  }
+
+  .section3 h1 {
+    font-size: 2rem;
+  }
+
+  .prev-button,
+  .next-button {
+    font-size: 2rem;
+    padding: 0.3rem;
+  }
+
+  .image-rotator {
+    max-width: 100%;
+  }
+}

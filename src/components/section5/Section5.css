@@ -1,0 +1,68 @@
+.section5 {
+  height: auto;
+  min-height: 100vh;
+  padding: 50px 20px;
+  background-color: #4b2e83; /* UW Seattle Purple */
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.section5 h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #b7a57a; /* UW Seattle Gold */
+}
+
+.section5 p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #b7a57a; /* UW Seattle Gold */
+  padding: 15px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.links a .icon {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.links a:hover {
+  background-color: #a47e3c; /* Slightly darker gold for hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section5 h1 {
+    font-size: 28px;
+  }
+  .section5 p {
+    font-size: 16px;
+  }
+  .links a {
+    padding: 12px 15px;
+  }
+  .links a .icon {
+    font-size: 20px;
+  }
+}

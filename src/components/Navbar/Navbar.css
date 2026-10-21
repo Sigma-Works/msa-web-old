@@ -1,0 +1,142 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 70px; /* Set a fixed height for the navbar */
+  background-color: #4b2e83; /* University of Washington purple */
+  padding: 0 20px; /* Remove vertical padding */
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center; /* Center content vertically */
+}
+
+/* Navbar container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo styles */
+.navbar-logo {
+  position: relative;
+}
+
+.navbar-logo img {
+  height: 70px; /* Match navbar height */
+  width: auto;
+}
+
+/* Mobile menu toggle button */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #b7a57a;
+  cursor: pointer;
+}
+
+/* Navbar list */
+.navbar-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /* Center the list items vertically */
+  margin: 0;
+  padding: 0;
+  width: calc(100% - 40px);
+}
+
+/* Navbar list items */
+.navbar-list-item {
+  margin: 0 20px;
+}
+
+/* Navbar links */
+.navbar-link {
+  color: #b7a57a;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+  display: flex;
+  align-items: center; /* Center text inside the link */
+  height: 70px; /* Match navbar height for vertical alignment */
+}
+
+.navbar-link:hover {
+  color: #fff;
+}
+
+.navbar-link:focus {
+  outline: none;
+  border-bottom: 2px solid #b7a57a;
+}
+
+/* Donate Now Button */
+.donate-now-button {
+  background-color: #b7a57a; /* UW Gold */
+  color: #4b2e83; /* UW Purple text */
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+  margin-right: 20px; /* Add offset to the left */
+}
+
+.donate-now-button:hover {
+  background-color: #fff;
+  color: #4b2e83;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+    margin-right: 1em;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .navbar-container {
+    flex-wrap: wrap;
+  }
+
+  .navbar-list {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background-color: #4b2e83;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 10px 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  .navbar-list.open {
+    display: flex;
+  }
+
+  .navbar-list-item {
+    margin: 10px 20px;
+    text-align: left;
+  }
+
+  /* Responsive Donate Button */
+  .donate-now-button {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 18px;
+    margin-left: 0; /* Remove left margin on mobile */
+  }
+}

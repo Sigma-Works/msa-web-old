@@ -1,0 +1,157 @@
+.admin-page {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.admin-title {
+  font-size: 36px;
+  color: #4b2e83; /* UW Purple */
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.add-category {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.add-category input {
+  width: 300px;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.add-category button {
+  padding: 10px 20px;
+  background-color: #b7a57a; /* UW Gold */
+  color: #4b2e83;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-category button:hover {
+  background-color: #fff;
+  color: #4b2e83;
+  border: 1px solid #b7a57a;
+}
+
+.admin-category {
+  margin-bottom: 40px;
+}
+
+.admin-category h2 {
+  font-size: 28px;
+  color: #4b2e83;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.admin-links-container,
+.admin-images-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-link-item,
+.admin-image-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-link-item a {
+  color: #4b2e83;
+  text-decoration: none;
+  font-size: 18px;
+  flex-grow: 1;
+}
+
+.admin-link-item button,
+.admin-image-item button {
+  padding: 5px 10px;
+  background-color: #ff4d4d;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.admin-link-item button:hover,
+.admin-image-item button:hover {
+  background-color: #ff3333;
+}
+
+.admin-new-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.admin-new-link input {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.admin-new-link button {
+  padding: 10px 20px;
+  background-color: #b7a57a;
+  color: #4b2e83;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-new-link button:hover {
+  background-color: #fff;
+  color: #4b2e83;
+  border: 1px solid #b7a57a;
+}
+
+/* Added styles for the logout button */
+.logout-button {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 20px;
+  background-color: #4b2e83;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #3a2366;
+}
+/* Styles for images in the admin page */
+.admin-image-item img {
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+}
